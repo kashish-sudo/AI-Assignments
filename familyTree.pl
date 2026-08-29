@@ -18,7 +18,7 @@ father(X,Y):-
     male(X),
     parent(X,Y).
 mother(X,Y):-
-    female(X),e
+    female(X),
     parent(X,Y).
 brother(X,Y):-
     male(X),
@@ -39,3 +39,18 @@ grandfather(X,Y):-
 grandmother(X,Y):-
     female(X),
     grandparent(X,Y).
+grandchild(X,Y):-
+    parent(Y,Z),
+    parent(Z,X).
+
+aunt(X,Y):-
+    parent(Z,Y),
+    sister(X,Z).
+
+% pr1 direct predecessor
+predecessor(X,Z):-
+    parent(X,Z).
+% pr2 indirect predecessor
+predecessor(X,Z):-
+    parent(X,Y),
+    predecessor(Y,Z).
