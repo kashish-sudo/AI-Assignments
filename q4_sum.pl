@@ -6,8 +6,7 @@ gosum:-
     sum(X,Y,R),
     write('The sum would be : '),
     write(R).
-summ(X,Y):-
+sum(X,Y,W):-
     W is X+Y,
-    write(W).
 
     
