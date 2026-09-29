@@ -6,6 +6,6 @@ gomax:-
     max(X,Y,R),
     write('The maximum out of both us : '),
     write(R).
-maxm(X,Y,M):-
+max(X,Y,M):-
     M is X, X>Y, !; M is Y, Y>X.
 
